@@ -8,13 +8,14 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 import org.modelmapper.ModelMapper;
+import org.springframework.hateoas.RepresentationModel;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@EqualsAndHashCode
+@EqualsAndHashCode(callSuper = false)
 @JsonPropertyOrder({"id","nome","estoque","preco"})
-public class ProdutoVO {
+public class ProdutoVO extends RepresentationModel<ProdutoVO> {
 
     @JsonProperty("id")
     private Long id;
