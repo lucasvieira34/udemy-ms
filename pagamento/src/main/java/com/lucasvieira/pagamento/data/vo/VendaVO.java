@@ -28,7 +28,7 @@ public class VendaVO extends RepresentationModel<VendaVO> {
     private Date data;
 
     @JsonProperty("produtos")
-    private List<ProdutoVenda> produtos;
+    private List<ProdutoVendaVO> produtos;
 
     @JsonProperty("valorTotal")
     private Double valorTotal;
